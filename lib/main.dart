@@ -13,8 +13,30 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'note',
       debugShowCheckedModeBanner: false,
-      theme: new ThemeData(
-        primaryColor: Colors.blue,
+      theme: ThemeData(
+        primarySwatch: Colors.teal,
+        textTheme: TextTheme(
+          headline: TextStyle(
+              fontFamily: 'Raleway',
+              fontWeight: FontWeight.bold,
+              color: Colors.black,
+              fontSize: 35),
+          body1: TextStyle(
+              fontFamily: 'Raleway',
+              fontWeight: FontWeight.bold,
+              color: Colors.black,
+              fontSize: 20),
+          body2: TextStyle(
+              fontFamily: 'Raleway',
+              fontWeight: FontWeight.normal,
+              color: Colors.black,
+              fontSize: 18),
+          subtitle: TextStyle(
+              fontFamily: 'Raleway',
+              fontWeight: FontWeight.normal,
+              color: Colors.black,
+              fontSize: 14),
+        ),
       ),
       home: NoteList(),
     );
